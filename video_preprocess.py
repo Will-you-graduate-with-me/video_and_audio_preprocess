@@ -3,7 +3,6 @@ import youtube_dl
 import os
 from tqdm import tqdm
 
-
 class preprocessingVideoToAudio:
 
     def download_video_from_youtube(output_dir, youtube_video_list):
@@ -24,7 +23,7 @@ class preprocessingVideoToAudio:
             try:
                 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                     ydl.download([video_url])
-                print("finished downloading videos")
+                print("finished downloading videos from Youtube")
             except Exception as e:
                 print('error', e)
 
@@ -57,6 +56,9 @@ class preprocessingVideoToAudio:
 
             clip = mp.VideoFileClip(video_path + "/" + video)
             clip.audio.write_audiofile(download_audio_path + audio)
+
+        clip.reader.close()
+        clip.audio.reader.close_proc()
 
         print("finished converting to " + audio_type)
 

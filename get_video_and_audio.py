@@ -1,6 +1,6 @@
-from video_preprocess import *
-from arguments import *
-from open_txt_files import *
+from utils.video_preprocess import *
+from utils.arguments import *
+from utils.open_txt_files import *
 
 if __name__ == '__main__':
 

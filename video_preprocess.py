@@ -1,5 +1,4 @@
 import moviepy.editor as mp
-import cv2
 import youtube_dl
 import os
 from tqdm import tqdm

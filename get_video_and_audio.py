@@ -7,7 +7,7 @@ if __name__ == '__main__':
     txt_file_dir = './'
     download_path = './video'
 
-    option_selected, txt_file_name = get_arguments()
+    option_selected, txt_file_name, extract_audio = get_arguments()
 
     if option_selected == "yes":
 
@@ -20,4 +20,5 @@ if __name__ == '__main__':
 
         preprocessingVideoToAudio.download_video_from_youtube(download_path, youtube_url_list)
 
-    preprocessingVideoToAudio.change_video_to_audio(download_path, "wav")
+    if extract_audio =="yes":
+        preprocessingVideoToAudio.change_video_to_audio(download_path, "wav")

@@ -57,8 +57,8 @@ class preprocessingVideoToAudio:
             clip = mp.VideoFileClip(video_path + "/" + video)
             clip.audio.write_audiofile(download_audio_path + audio)
 
-        clip.reader.close()
-        clip.audio.reader.close_proc()
+            clip.reader.close()
+            clip.audio.reader.close_proc()
 
         print("finished converting to " + audio_type)
 

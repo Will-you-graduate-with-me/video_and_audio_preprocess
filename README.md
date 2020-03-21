@@ -1,29 +1,29 @@
-유튜브 동영상 다운 및 오디오 추출
+download videos from Youtube and extract wav files
 ------
-### 1. 패키지 설치
+### 1. package installation
 ```
 pip install -r requirements.txt 
 ```
-### 2. 코드 실행
+### 2. how to run
 
-youtube 링크로 다운받을 경우 유튜브 링크를 포함한 텍스트 파일을 ./ 위치에 저장해두고 실행</br>
-텍스트 파일 이름을 입력하지 않고 실행할 경우 다운이 진행되지 않고 종료
+to download videos with youtube links, locate text files with youtube links in ./ directory </br>
+download won't proceed without the filename. 
 ```
 python get_video_and_audio.py --youtube yes --fn filename.txt --audio yes
 ```
 
-youtube에서 동영상 다운만 받고 오디오 추출은 하지 않을 경우
+download videos from youtube but no extraction of audio files </br>
 ```
 python get_video_and_audio.py --youtube yes --fn filename.txt --audio no
 ```
 
-기존 로컬 파일에 존재하는 동영상으로 오디오 추출만 할 경우 ./video 폴더를 만든 뒤에 동영상을 옮겨 담고 실행</br>
+move your videos to ./video directory if downloading from youtube is not necessary </br>
+run the below code only to get the extracted audios from ./video directory
 ```
 python get_video_and_audio.py --youtube no --audio yes
 ```
 
-##### video 파일에는 다운로드 된 동영상들이 저장되고, audio 파일에는 video 파일에서 각각 추출된 audio 파일들이 저장됩니다. 
-
+##### downloaded videos will be saved in ./video directory and extracted audio files will be saved in ./audio directory
 ### 3. Optional Arguments
 ```
 optional arguments:

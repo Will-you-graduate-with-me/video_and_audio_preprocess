@@ -1,17 +1,22 @@
 from video_preprocess import *
 from arguments import *
+from open_txt_files import *
 
 if __name__ == '__main__':
 
+    txt_file_dir = './'
     download_path = './video'
 
-    option_selected = get_arguments()
+    option_selected, txt_file_name = get_arguments()
 
     if option_selected == "yes":
-        youtube_url_list = [
-            "https://www.youtube.com/watch?v=dP15zlyra3c",
-            "https://www.youtube.com/watch?v=M25AP_KPwlI"
-        ]
+
+        # 텍스트 파일에서 유튜브 링크 읽어오기
+        if txt_file_name is None:
+            print("no txt file name")
+            exit()
+
+        youtube_url_list = read_txt_files(txt_file_dir+txt_file_name)
 
         preprocessingVideoToAudio.download_video_from_youtube(download_path, youtube_url_list)
 

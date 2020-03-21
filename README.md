@@ -18,7 +18,7 @@ python get_video_and_audio.py --youtube no
 ```
 ##### video 파일에는 다운로드 된 동영상들이 저장되고, audio 파일에는 video 파일에서 각각 추출된 audio 파일들이 저장됩니다. 
 
-### 3. optional arguments
+### 3. Optional Arguments
 ```
 optional arguments:
   -h, --help          show this help message and exit

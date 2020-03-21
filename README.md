@@ -6,13 +6,13 @@ pip install -r requirements.txt
 ```
 ### 2. 코드 실행
 
-youtube 링크로 다운받을 경우 유튜브 링크를 포함한 텍스트 파일을 ./ 위치에 저장해두고 실행\n
+youtube 링크로 다운받을 경우 유튜브 링크를 포함한 텍스트 파일을 ./ 위치에 저장해두고 실행</br>
 텍스트 파일 이름을 입력하지 않고 실행할 경우 다운이 진행되지 않고 종료
 ```
 python get_video_and_audio.py --youtube yes --fn filename.txt
 ```
 
-기존 로컬 파일에 존재하는 동영상으로 audio 추출만 할 경우 ./video 폴더를 만든 뒤에 동영상을 옮겨 담고 실행\n
+기존 로컬 파일에 존재하는 동영상으로 audio 추출만 할 경우 ./video 폴더를 만든 뒤에 동영상을 옮겨 담고 실행</br>
 ```
 python get_video_and_audio.py --youtube no
 ```

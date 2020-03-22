@@ -6,7 +6,7 @@ pip install -r requirements.txt
 ```
 ### 2. how to run
 
-to download videos with youtube links, locate text files with youtube links in ./ directory. </br>
+to download videos with youtube links, locate a text file with youtube links in ./ directory. </br>
 download won't proceed without the filename. 
 ```
 python get_video_and_audio.py --youtube yes --fn filename.txt --audio yes

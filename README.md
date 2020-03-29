@@ -18,7 +18,7 @@ python get_video_and_audio.py --youtube yes --fn filename.txt --audio no
 ```
 
 move your videos to ./video directory if downloading from youtube is not necessary. </br>
-run the below code only to get the extracted audios from ./video directory.
+run the code  only to get the extracted audios from ./video directory.
 ```
 python get_video_and_audio.py --youtube no --audio yes
 ```
